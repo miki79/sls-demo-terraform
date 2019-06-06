@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "deploy" {
-  bucket = "${var.bucket_deployment}-${var.region}"
+  bucket = "${var.bucket_deployment}"
   acl    = "private"
   region = "${var.region}"
 
