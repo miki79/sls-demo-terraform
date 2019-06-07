@@ -7,6 +7,8 @@ resource "aws_s3_bucket" "deploy" {
 
   tags = {
     environment = "${var.environment}"
+    project     = "${var.project}"
+    owner       = "${var.owner}"
   }
 }
 

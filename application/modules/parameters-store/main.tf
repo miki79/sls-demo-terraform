@@ -6,6 +6,8 @@ resource "aws_ssm_parameter" "bucket_deployment" {
 
   tags = {
     environment = "${var.environment}"
+    project     = "${var.project}"
+    owner       = "${var.owner}"
   }
 }
 
@@ -17,6 +19,8 @@ resource "aws_ssm_parameter" "app_domain" {
 
   tags = {
     environment = "${var.environment}"
+    project     = "${var.project}"
+    owner       = "${var.owner}"
   }
 }
 
@@ -28,5 +32,7 @@ resource "aws_ssm_parameter" "api_private_key" {
 
   tags = {
     environment = "${var.environment}"
+    project     = "${var.project}"
+    owner       = "${var.owner}"
   }
 }

@@ -11,6 +11,8 @@ module "certificate" {
   route53_zone_id          = "${data.aws_route53_zone.root_domain.zone_id}"
 
   environment = "${var.environment}"
+  project     = "${var.project}"
+  owner       = "${var.owner}"
 
 }
 

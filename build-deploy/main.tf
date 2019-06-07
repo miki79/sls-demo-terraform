@@ -1,7 +1,3 @@
-
-## READ THIS to setup OAuth for github
-## https://www.itonaut.com/2018/06/18/use-github-source-in-aws-codebuild-project-using-aws-cloudformation/
-
 provider "aws" {
   region = "${var.region}"
 }

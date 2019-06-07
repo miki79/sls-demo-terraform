@@ -8,7 +8,9 @@ module "domain" {
   route53_root_domain_name = "${var.route53_root_domain_name}"
   route53_sub_domain_name  = "${var.route53_sub_domain_name}"
 
+  project     = "${var.project}"
   environment = "${var.environment}"
+  owner       = "${var.owner}"
 
 }
 
@@ -17,7 +19,10 @@ module "parameters_store" {
   bucket_deployment = "${var.s3_bucket_deployment}-${var.region}" ### TODO - fix and put reference to bucket_deployment module
   app_domain        = "${var.route53_sub_domain_name}"
   api_private_key   = "${var.api_private_key}"
-  environment       = "${var.environment}"
+
+  project     = "${var.project}"
+  environment = "${var.environment}"
+  owner       = "${var.owner}"
 }
 
 module "bucket_deployment" {
@@ -25,5 +30,8 @@ module "bucket_deployment" {
 
   bucket_deployment = "${var.s3_bucket_deployment}-${var.region}"
   region            = "${var.region}"
-  environment       = "${var.environment}"
+
+  project     = "${var.project}"
+  environment = "${var.environment}"
+  owner       = "${var.owner}"
 }

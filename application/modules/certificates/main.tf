@@ -8,6 +8,8 @@ resource "aws_acm_certificate" "cert" {
 
   tags = {
     environment = "${var.environment}"
+    project     = "${var.project}"
+    owner       = "${var.owner}"
   }
 }
 
