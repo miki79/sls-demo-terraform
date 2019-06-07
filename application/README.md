@@ -1,1 +1,3 @@
-Setup Route53 root domain
+# Installation
+
+- Setup Route53 root domain
